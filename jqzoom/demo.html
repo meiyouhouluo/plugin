@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.8.3.min.js"></script>
+		<script src="jqzoom.js"></script>
+		<style type="text/css">
+			#csor {
+				position: absolute;
+				border: 1px solid #fff;
+				background: #f0f0f0;
+				opacity: 0.7;
+				z-index: 200;
+				display: none;
+			}
+			
+			#ibox {
+				position: absolute;
+				display: none;
+				overflow: hidden;
+				z-index: 10000;
+				border: 1px solid #e2e2e2;
+			}
+			
+			#ibox img {
+				position: absolute;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="jqzoom" style="width: 200px;height: 200px;position: relative;">
+			<img src="img/1.jpg" style="width: 100%;" />
+		</div>
+		<script>
+			$(function(){
+				$("#jqzoom").jqzoom({
+				wzoom: 60, //zoomed width default width
+				hzoom: 60, //zoomed div default width
+                offset: 10
+				});
+			})
+		</script>
+
+	</body>
+
+</html>
